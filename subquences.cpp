@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
- void filter(char arr[],int num){
+void filter(char arr[],int num){
   int j=0;
   while(num>0){
     int last_bit=1 & num;
@@ -14,7 +14,8 @@ num=num>>1;
 cout<<endl;
 
  }
-void printallsubsequenses(char arr[]){
+void printallsubsequenses(char arr[])
+{
   int n=strlen(arr);
   for(int i=0;i<(1<<n);i++){
     filter(arr,i);
@@ -22,16 +23,14 @@ void printallsubsequenses(char arr[]){
 return ;
 }
 int main() {
-    //   #ifndef ONLINE_JUDGE
-    // freopen("input1.txt","r",stdin);
-    //  freopen("output2.txt","w",stdout);
-    //  #endif
-    char arr[100];
+      #ifndef ONLINE_JUDGE
+    freopen("input1.txt","r",stdin);
+     freopen("output1.txt","w",stdout);
+     #endif
+    vector<string>
     cin>>arr;
     printallsubsequenses(arr);
-
     return 0;
-  
-}
+  }
 
 
